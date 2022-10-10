@@ -39,7 +39,7 @@ class LogInControllerImp extends LoginController {
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success PHP") {
           myservices.sharedPreferences
-              .setString("id", response['data']['users_id']);
+              .setInt("id", response['data']['users_id']);
           myservices.sharedPreferences
               .setString("username", response['data']['users_name']);
           myservices.sharedPreferences

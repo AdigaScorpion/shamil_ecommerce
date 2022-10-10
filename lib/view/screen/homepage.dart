@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                               )),
                           Positioned(
                               top: -20,
-                              left: -20,
+                              right: -20,
                               child: Container(
                                 height: 160,
                                 width: 160,
