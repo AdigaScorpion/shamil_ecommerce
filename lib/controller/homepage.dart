@@ -15,7 +15,7 @@ class HomeControllerImp extends HomeController {
   late StatusRequest statusRequest;
   // List data = [];
   List categories = [];
-  // List items = [];
+  List items = [];
 
   initialData() {}
 
@@ -27,6 +27,7 @@ class HomeControllerImp extends HomeController {
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success PHP") {
         categories.addAll(response['categories']);
+        items.addAll(response['items']);
       }
       update();
     }

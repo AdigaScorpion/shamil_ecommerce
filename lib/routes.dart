@@ -3,6 +3,7 @@ import 'package:shamil_ecommerce/core/middleware/mymiddleware.dart';
 import 'package:shamil_ecommerce/view/screen/auth/forgetpassword/checkemail.dart';
 import 'package:shamil_ecommerce/view/screen/auth/forgetpassword/verifycodeForgetpassword.dart';
 import 'package:shamil_ecommerce/view/screen/homepage.dart';
+import 'package:shamil_ecommerce/view/screen/homescreen.dart';
 import 'package:shamil_ecommerce/view/screen/language.dart';
 import 'view/screen/auth/signup/verifycodesignup.dart';
 import '../../core/constant/routes.dart';
@@ -31,5 +32,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: Approute.verifyCodeSignUp, page: () => const VerifyCodeSignUp()),
   //========================= HomePage ===========================//
-  GetPage(name: Approute.homePage, page: () => const HomePage()),
+  GetPage(name: Approute.homePage, page: () => const HomeScreen()),
 ];
