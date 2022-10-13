@@ -19,6 +19,7 @@ class ListCategories extends GetView<HomeControllerImp> {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Categories(
+                i: index,
                 categoriesModel:
                     CategoriesModel.fromJson(controller.categories[index]));
           }),
@@ -26,29 +27,35 @@ class ListCategories extends GetView<HomeControllerImp> {
   }
 }
 
-class Categories extends StatelessWidget {
+class Categories extends GetView<HomeControllerImp> {
+  final int? i;
   final CategoriesModel categoriesModel;
-  const Categories({super.key, required this.categoriesModel});
+  const Categories({super.key, required this.categoriesModel, required this.i});
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Container(
-        decoration: BoxDecoration(
-            color: Appcolor.secondaryColor,
-            borderRadius: BorderRadius.circular(10)),
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.only(bottom: 5),
-        height: 80,
-        width: 100,
-        child: SvgPicture.network(
-            "${AppLink.imagecategories}/${categoriesModel.categoriesImage}",
-            color: Appcolor.backGroundColor),
-      ),
-      Text(
-        "${categoriesModel.categoriesName}",
-        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-      )
-    ]);
+    return InkWell(
+      onTap: () {
+        controller.goToItmes(controller.categories, i!);
+      },
+      child: Column(children: [
+        Container(
+          decoration: BoxDecoration(
+              color: Appcolor.secondaryColor,
+              borderRadius: BorderRadius.circular(10)),
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.only(bottom: 5),
+          height: 80,
+          width: 100,
+          child: SvgPicture.network(
+              "${AppLink.imagecategories}/${categoriesModel.categoriesImage}",
+              color: Appcolor.backGroundColor),
+        ),
+        Text(
+          "${categoriesModel.categoriesName}",
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        )
+      ]),
+    );
   }
 }

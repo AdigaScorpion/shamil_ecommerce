@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/constant/routes.dart';
 import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
 import 'package:shamil_ecommerce/core/services/services.dart';
 import 'package:shamil_ecommerce/data/home_data.dart';
@@ -7,6 +8,7 @@ import 'package:shamil_ecommerce/data/home_data.dart';
 abstract class HomeController extends GetxController {
   initialData();
   getdata();
+  goToItmes(List categories, int selectedCat);
 }
 
 class HomeControllerImp extends HomeController {
@@ -38,5 +40,11 @@ class HomeControllerImp extends HomeController {
     getdata();
     initialData();
     super.onInit();
+  }
+
+  @override
+  goToItmes(categories, selectedCat) {
+    Get.toNamed(Approute.items,
+        arguments: {"categories": categories, "selectedcat": selectedCat});
   }
 }

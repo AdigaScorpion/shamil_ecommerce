@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/constant/imageasset.dart';
 
 class HandlingDataView extends StatelessWidget {
   final StatusRequest statusRequest;
@@ -12,7 +14,7 @@ class HandlingDataView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return statusRequest == StatusRequest.loading
-        ? const Center(child: Text("Loading"))
+        ? Center(child: Lottie.asset(AppImageAsset.loadingfiles))
         : statusRequest == StatusRequest.noconnection
             ? const Center(
                 child: Text("You Are Offline \n Check Your Connection"))

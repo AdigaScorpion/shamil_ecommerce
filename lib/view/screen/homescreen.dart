@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/controller/homescreen.dart';
+import 'package:shamil_ecommerce/core/constant/color.dart';
 import 'package:shamil_ecommerce/view/widget/home/custombuttonappbar.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class HomeScreen extends StatelessWidget {
     return GetBuilder<HomeScreenControllerImp>(
         builder: (controller) => Scaffold(
             floatingActionButton: FloatingActionButton(
-                onPressed: () {}, child: Icon(Icons.shopping_cart_outlined)),
+                backgroundColor: Appcolor.primaryColor,
+                onPressed: () {},
+                child: Icon(Icons.shopping_cart_outlined)),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: BottomAppBar(
