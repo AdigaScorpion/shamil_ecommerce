@@ -16,33 +16,31 @@ class ItemsPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(10),
-        child: GetBuilder<ItemsControllerImp>(
-          builder: (controller) => HandlingDataView(
-            statusRequest: controller.statusRequest,
-            widget: ListView(
-              children: [
-                CustomAppBar(
-                  titleappbar: "Search",
-                  onPressednotification: () {},
-                  onPressedsearch: () {},
-                ),
-                SizedBox(height: 15),
-                ListCategoriesItems(),
-                GridView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: controller.categories.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2, childAspectRatio: 0.8),
-                    itemBuilder: (BuildContext Context, index) {
-                      return CustomListItems(
-                          itemsModel:
-                              ItemsModel.fromJson(controller.data[index]));
-                    }),
-              ],
+        child: ListView(children: [
+          CustomAppBar(
+            titleappbar: "Search",
+            onPressednotification: () {},
+            onPressedsearch: () {},
+          ),
+          SizedBox(height: 15),
+          ListCategoriesItems(),
+          GetBuilder<ItemsControllerImp>(
+            builder: (controller) => HandlingDataView(
+              statusRequest: controller.statusRequest,
+              widget: GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: controller.data.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2, childAspectRatio: 0.8),
+                  itemBuilder: (BuildContext Context, index) {
+                    return CustomListItems(
+                        itemsModel:
+                            ItemsModel.fromJson(controller.data[index]));
+                  }),
             ),
           ),
-        ),
+        ]),
       ),
     );
   }

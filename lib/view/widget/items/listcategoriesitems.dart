@@ -36,7 +36,7 @@ class Categories extends GetView<ItemsControllerImp> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.changeCat(i!);
+        controller.changeCat(i!, categoriesModel.categoriesId.toString());
       },
       child: Column(children: [
         GetBuilder<ItemsControllerImp>(

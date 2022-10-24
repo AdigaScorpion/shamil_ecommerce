@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import '../../core/functions/checkconnection.dart';
-import '../../core/class/statusrequest.dart';
 import 'package:http/http.dart' as http;
+import '../../core/class/statusrequest.dart';
+import '../../core/functions/checkconnection.dart';
 
 class Crud {
   Future<Either<StatusRequest, Map>> postData(String linkurl, Map data) async {

@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 Future<bool> appexitalert() {
   Get.defaultDialog(title: '51'.tr, middleText: '52'.tr, actions: [

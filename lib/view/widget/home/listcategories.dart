@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
-import 'package:shamil_ecommerce/data/model/categoriesmodel.dart';
-import 'package:shamil_ecommerce/core/constant/color.dart';
-import 'package:shamil_ecommerce/controller/homepage.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
+import 'package:shamil_ecommerce/controller/homepage.dart';
+import 'package:shamil_ecommerce/core/constant/color.dart';
+import 'package:shamil_ecommerce/data/model/categoriesmodel.dart';
 
 class ListCategories extends GetView<HomeControllerImp> {
   const ListCategories({super.key});
@@ -37,7 +37,7 @@ class Categories extends GetView<HomeControllerImp> {
     return InkWell(
       onTap: () {
         controller.goToItmes(
-            controller.categories, i!, categoriesModel.categoriesName!);
+            controller.categories, i!, categoriesModel.categoriesId.toString());
       },
       child: Column(children: [
         Container(

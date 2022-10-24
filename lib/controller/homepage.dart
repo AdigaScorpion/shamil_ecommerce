@@ -50,7 +50,7 @@ class HomeControllerImp extends HomeController {
     Get.toNamed(Approute.items, arguments: {
       "categories": categories,
       "selectedcat": selectedCat,
-      "categoryid": categoryid,
+      "catid": categoryid,
     });
   }
 }

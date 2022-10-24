@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 10),
                   CustomTitleHome(title: 'Recomended For You'),
                   ListItems(),
-                  CustomTitleHome(title: 'Brst seller'),
+                  CustomTitleHome(title: 'Best seller'),
                   ListItems(),
                 ]))));
   }

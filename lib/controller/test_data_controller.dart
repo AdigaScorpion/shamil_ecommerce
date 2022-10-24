@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
+import '../core/class/statusrequest.dart';
 import '../core/functions/handlingdata.dart';
 import '../data/datasource/remot/test_data.dart';
-import '../core/class/statusrequest.dart';
 
 class TestController extends GetxController {
   TestData testData = TestData(Get.find());
