@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/controller/items.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
-import 'package:shamil_ecommerce/data/model/catigoriesmodel.dart';
+import 'package:shamil_ecommerce/data/model/categoriesmodel.dart';
 
 class ListCategoriesItems extends GetView<ItemsControllerImp> {
   const ListCategoriesItems({Key? key}) : super(key: key);

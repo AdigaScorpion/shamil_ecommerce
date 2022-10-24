@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shamil_ecommerce/controller/forgotpassword/checkemail.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/constant/imageasset.dart';
 import 'package:shamil_ecommerce/core/functions/validinput.dart';
 import 'package:shamil_ecommerce/view/widget/auth/custombotton.dart';
 import 'package:shamil_ecommerce/view/widget/auth/customtextbody.dart';
@@ -26,7 +28,7 @@ class CheckEmail extends StatelessWidget {
       body: GetBuilder<CheckEmailImp>(
           builder: (controller) => controller.statusRequest ==
                   StatusRequest.loading
-              ? Center(child: Text("Loading ..."))
+              ? Center(child: Lottie.asset(AppImageAsset.loading))
               : Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 35),

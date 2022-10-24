@@ -15,7 +15,7 @@ class ItemsPage extends StatelessWidget {
     Get.put(ItemsControllerImp());
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(10),
         child: GetBuilder<ItemsControllerImp>(
           builder: (controller) => HandlingDataView(
             statusRequest: controller.statusRequest,

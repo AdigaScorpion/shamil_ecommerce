@@ -1,21 +1,24 @@
 import 'package:get/get.dart';
-import 'package:shamil_ecommerce/core/class/statusrequest.dart';
-import 'package:shamil_ecommerce/core/constant/routes.dart';
-import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
-import 'package:shamil_ecommerce/core/services/services.dart';
 import 'package:shamil_ecommerce/data/home_data.dart';
+import 'package:shamil_ecommerce/core/constant/routes.dart';
+import 'package:shamil_ecommerce/core/services/services.dart';
+import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
 
 abstract class HomeController extends GetxController {
   initialData();
   getdata();
-  goToItmes(List categories, int selectedCat);
+  goToItmes(
+    List categories,
+    int selectedCat,
+    String categoryid,
+  );
 }
 
 class HomeControllerImp extends HomeController {
   Myservices myservices = Get.find();
   HomeData homeData = HomeData(Get.find());
   late StatusRequest statusRequest;
-  // List data = [];
   List categories = [];
   List items = [];
 
@@ -43,8 +46,11 @@ class HomeControllerImp extends HomeController {
   }
 
   @override
-  goToItmes(categories, selectedCat) {
-    Get.toNamed(Approute.items,
-        arguments: {"categories": categories, "selectedcat": selectedCat});
+  goToItmes(categories, selectedCat, categoryid) {
+    Get.toNamed(Approute.items, arguments: {
+      "categories": categories,
+      "selectedcat": selectedCat,
+      "categoryid": categoryid,
+    });
   }
 }

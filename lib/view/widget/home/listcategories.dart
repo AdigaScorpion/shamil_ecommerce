@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:shamil_ecommerce/controller/homepage.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter/material.dart';
+import 'package:shamil_ecommerce/data/model/categoriesmodel.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
-import 'package:shamil_ecommerce/data/model/catigoriesmodel.dart';
+import 'package:shamil_ecommerce/controller/homepage.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
 
 class ListCategories extends GetView<HomeControllerImp> {
@@ -36,7 +36,8 @@ class Categories extends GetView<HomeControllerImp> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.goToItmes(controller.categories, i!);
+        controller.goToItmes(
+            controller.categories, i!, categoriesModel.categoriesName!);
       },
       child: Column(children: [
         Container(
@@ -48,7 +49,7 @@ class Categories extends GetView<HomeControllerImp> {
           height: 80,
           width: 100,
           child: SvgPicture.network(
-              "${AppLink.imagecategories}/${categoriesModel.categoriesImage}",
+              "${AppLink.imagecategories}/${controller.categories[i!]['categories_image']}",
               color: Appcolor.backGroundColor),
         ),
         Text(

@@ -7,5 +7,5 @@ class Appcolor {
   static const backGroundColor = Colors.white;
   static const secondaryColor = Color(0xff2980b9);
   static const thierdColor = Color(0xff34495e);
-  static const backColor = Color.fromARGB(255, 169, 169, 170);
+  static const backColor = Color.fromARGB(255, 227, 227, 228);
 }

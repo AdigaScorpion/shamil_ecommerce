@@ -14,7 +14,7 @@ class HandlingDataView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return statusRequest == StatusRequest.loading
-        ? Center(child: Lottie.asset(AppImageAsset.loadingfiles))
+        ? Center(child: Lottie.asset(AppImageAsset.loading))
         : statusRequest == StatusRequest.noconnection
             ? const Center(
                 child: Text("You Are Offline \n Check Your Connection"))

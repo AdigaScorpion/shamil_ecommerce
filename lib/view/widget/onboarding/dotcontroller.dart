@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/controller/onboarding_controller.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';

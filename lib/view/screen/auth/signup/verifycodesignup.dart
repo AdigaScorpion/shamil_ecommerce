@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shamil_ecommerce/controller/auth/verifycodesignup.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/constant/imageasset.dart';
 import '../../../../core/constant/color.dart';
 import '../../../widget/auth/customtextbody.dart';
 import '../../../widget/auth/customtilte.dart';
@@ -24,7 +26,7 @@ class VerifyCodeSignUp extends StatelessWidget {
       body: GetBuilder<VerifyCodeSignUpImp>(
           builder: (controller) => controller.statusRequest ==
                   StatusRequest.loading
-              ? Center(child: Text("Loading ..."))
+              ? Center(child: Lottie.asset(AppImageAsset.loading))
               : Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 35),

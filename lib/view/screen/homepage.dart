@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         builder: (controller) => HandlingDataView(
             statusRequest: controller.statusRequest,
             widget: Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: ListView(children: [
                   CustomAppBar(
                       titleappbar: "Search",

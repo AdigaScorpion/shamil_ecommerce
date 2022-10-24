@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/controller/forgotpassword/verifycodeforgetpassword.dart';
-import '../../../../core/constant/color.dart';
-import '../../../widget/auth/customtextbody.dart';
-import '../../../widget/auth/customtilte.dart';
+import 'package:shamil_ecommerce/core/constant/color.dart';
+import 'package:shamil_ecommerce/view/widget/auth/customtextbody.dart';
+import 'package:shamil_ecommerce/view/widget/auth/customtilte.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({Key? key}) : super(key: key);

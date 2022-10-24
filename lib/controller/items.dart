@@ -6,12 +6,14 @@ import 'package:shamil_ecommerce/data/datasource/remot/items_data.dart';
 abstract class ItemsController extends GetxController {
   initialData();
   changeCat(int val);
-  getitems();
+  getitems(String categoryid);
 }
 
 class ItemsControllerImp extends ItemsController {
   List categories = [];
   int? selectedCat;
+  int? catid;
+  String? categoryid;
 
   ItemsData itemsData = ItemsData(Get.find());
 
@@ -22,7 +24,6 @@ class ItemsControllerImp extends ItemsController {
   @override
   void onInit() {
     initialData();
-    getitems();
     super.onInit();
   }
 
@@ -30,6 +31,8 @@ class ItemsControllerImp extends ItemsController {
   initialData() {
     categories = Get.arguments['categories'];
     selectedCat = Get.arguments['selectedcat'];
+    categoryid = Get.arguments['categoryid'];
+    getitems(categoryid!);
   }
 
   @override
@@ -39,9 +42,9 @@ class ItemsControllerImp extends ItemsController {
   }
 
   @override
-  getitems() async {
+  getitems(categoryid) async {
     statusRequest = StatusRequest.loading;
-    var response = await itemsData.getData();
+    var response = await itemsData.getData(categoryid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       update();
