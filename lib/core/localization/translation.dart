@@ -57,12 +57,14 @@ class MyTranslation extends Translations {
           "47": "لا يمكن أن يكون أقل من   ",
           "48": "لا يمكن ان يكون أكثر من   ",
           "49": "لا يمكن أن يكون فارغ",
-          "50": "",
+          "50": "الأقسام",
           "51": "تنبيه",
           "52": "هل تريد الخروج من التطبيق؟ ",
           "53": "تأكيد",
           "54": "الغاء",
           "55": "أدخل معلوماتك لانشاء حساب ",
+          "56": "منتجات قد تعجبك",
+          "57": "المنتجات الأكثر مبيعا",
         },
         "en": {
           "1": "Choose Language",
@@ -104,12 +106,14 @@ class MyTranslation extends Translations {
           "47": "Can not be less than    ",
           "48": "Can not be more than    ",
           "49": "Can not be Empty",
-          "50": "",
+          "50": "Categories",
           "51": "Attention",
           "52": "Do You Want To Exit?",
           "53": "Confirm",
           "54": "Cancle",
           "55": "Enter Your Information To Sign Up",
+          "56": "Recomended For You",
+          "57": "Best seller",
         }
       };
 }

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
+import 'package:shamil_ecommerce/core/functions/translatedatabase.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
 
@@ -23,7 +24,8 @@ class CustomListItems extends StatelessWidget {
                 fit: BoxFit.fill,
                 imageUrl: "${AppLink.imageitems}/${itemsModel.itemsImage}"),
             SizedBox(height: 10),
-            Text("${itemsModel.itemsName}",
+            Text(
+                "${TranslatDatabase(itemsModel.itemsNameAr, itemsModel.itemsName)}",
                 style: TextStyle(color: Appcolor.black)),
             SizedBox(height: 10),
             Row(

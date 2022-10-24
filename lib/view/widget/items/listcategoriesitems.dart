@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/controller/items.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
+import 'package:shamil_ecommerce/core/functions/translatedatabase.dart';
 import 'package:shamil_ecommerce/data/model/categoriesmodel.dart';
 
 class ListCategoriesItems extends GetView<ItemsControllerImp> {
@@ -50,7 +51,7 @@ class Categories extends GetView<ItemsControllerImp> {
                         )
                       : null,
                   child: Text(
-                    "${categoriesModel.categoriesName}",
+                    "${TranslatDatabase(categoriesModel.categoriesNameAr, categoriesModel.categoriesName)}",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                 ))

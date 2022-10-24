@@ -25,12 +25,12 @@ class HomePage extends StatelessWidget {
                       onPressedsearch: () {},
                       onPressednotification: () {}),
                   CustumCard(title: "Shop Offers", body: "Offers Content"),
-                  CustomTitleHome(title: 'Categories'),
+                  CustomTitleHome(title: "50".tr),
                   ListCategories(),
                   SizedBox(height: 10),
-                  CustomTitleHome(title: 'Recomended For You'),
+                  CustomTitleHome(title: "56".tr),
                   ListItems(),
-                  CustomTitleHome(title: 'Best seller'),
+                  CustomTitleHome(title: "57".tr),
                   ListItems(),
                 ]))));
   }
