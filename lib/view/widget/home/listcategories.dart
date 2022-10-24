@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:shamil_ecommerce/core/functions/translatedatabase.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
 import 'package:shamil_ecommerce/controller/homepage.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
@@ -53,7 +54,7 @@ class Categories extends GetView<HomeControllerImp> {
               color: Appcolor.backGroundColor),
         ),
         Text(
-          "${categoriesModel.categoriesName}",
+          "${TranslatDatabase(categoriesModel.categoriesNameAr, categoriesModel.categoriesName)}",
           style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
         )
       ]),
