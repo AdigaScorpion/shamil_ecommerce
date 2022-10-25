@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/controller/homepage.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
+import 'package:shamil_ecommerce/core/functions/translatedatabase.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
 
@@ -42,7 +43,7 @@ class Items extends StatelessWidget {
         left: 20,
         top: 10,
         child: Text(
-          "${itemsModel.itemsName}",
+          "${TranslatDatabase(itemsModel.categoriesNameAr, itemsModel.itemsName)}",
           style: TextStyle(fontSize: 12, color: Appcolor.black),
         ),
       ),

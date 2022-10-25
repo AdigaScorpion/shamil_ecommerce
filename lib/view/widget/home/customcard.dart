@@ -1,7 +1,9 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:shamil_ecommerce/controller/homepage.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
 
-class CustumCard extends StatelessWidget {
+class CustumCard extends GetView<HomeControllerImp> {
   final String title;
   final String body;
   const CustumCard({super.key, required this.title, required this.body});
@@ -28,7 +30,8 @@ class CustumCard extends StatelessWidget {
               )),
           Positioned(
               top: -20,
-              right: -20,
+              right: controller.lang == "en" ? -20 : null,
+              left: controller.lang == "ar" ? -20 : null,
               child: Container(
                 height: 160,
                 width: 160,

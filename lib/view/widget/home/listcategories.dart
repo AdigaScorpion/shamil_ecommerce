@@ -47,15 +47,15 @@ class Categories extends GetView<HomeControllerImp> {
               borderRadius: BorderRadius.circular(10)),
           padding: EdgeInsets.all(10),
           margin: EdgeInsets.only(bottom: 5),
-          height: 80,
-          width: 100,
+          height: 60,
+          width: 80,
           child: SvgPicture.network(
               "${AppLink.imagecategories}/${controller.categories[i!]['categories_image']}",
               color: Appcolor.backGroundColor),
         ),
         Text(
           "${TranslatDatabase(categoriesModel.categoriesNameAr, categoriesModel.categoriesName)}",
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
         )
       ]),
     );

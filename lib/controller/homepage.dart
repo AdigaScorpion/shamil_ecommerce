@@ -21,8 +21,15 @@ class HomeControllerImp extends HomeController {
   late StatusRequest statusRequest;
   List categories = [];
   List items = [];
+  String? username;
+  int? id;
+  String? lang;
 
-  initialData() {}
+  initialData() {
+    username = myservices.sharedPreferences.getString("username");
+    id = myservices.sharedPreferences.getInt("id");
+    lang = myservices.sharedPreferences.getString("lang");
+  }
 
   @override
   getdata() async {

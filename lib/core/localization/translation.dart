@@ -65,6 +65,11 @@ class MyTranslation extends Translations {
           "55": "أدخل معلوماتك لانشاء حساب ",
           "56": "منتجات قد تعجبك",
           "57": "المنتجات الأكثر مبيعا",
+          "58": "الرئيسية",
+          "59": "اعدادات",
+          "60": "الحساب",
+          "61": "المفضلة",
+          "62": "بحث",
         },
         "en": {
           "1": "Choose Language",
@@ -114,6 +119,11 @@ class MyTranslation extends Translations {
           "55": "Enter Your Information To Sign Up",
           "56": "Recomended For You",
           "57": "Best seller",
+          "58": "Home",
+          "59": "Setting",
+          "60": "Profile",
+          "61": "Favorite",
+          "62": "Search",
         }
       };
 }

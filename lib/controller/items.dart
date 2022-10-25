@@ -2,11 +2,13 @@ import 'package:get/get.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
 import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
 import 'package:shamil_ecommerce/data/datasource/remot/items_data.dart';
+import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 
 abstract class ItemsController extends GetxController {
   initialData();
   changeCat(int val, String catval);
   getitems(String categid);
+  gotoitemsdetails(ItemsModel itemsModel);
 }
 
 class ItemsControllerImp extends ItemsController {
@@ -53,5 +55,10 @@ class ItemsControllerImp extends ItemsController {
       return data.addAll(response['data']);
     }
     update();
+  }
+
+  @override
+  gotoitemsdetails(itemsModel) {
+    Get.toNamed("itemsdetails", arguments: {"itemsmodel": itemsModel});
   }
 }

@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: ListView(children: [
                   CustomAppBar(
-                      titleappbar: "Search",
+                      titleappbar: "62".tr,
                       onPressedsearch: () {},
                       onPressednotification: () {}),
                   CustumCard(title: "Shop Offers", body: "Offers Content"),

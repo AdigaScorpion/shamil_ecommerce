@@ -26,14 +26,14 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     children: [
                       CustomBottonAppBar(
-                          textbotton: "Home",
+                          textbotton: "58".tr,
                           icondata: Icons.home,
                           active: controller.currentpage == 0 ? true : false,
                           onPressed: () {
                             controller.changepage(0);
                           }),
                       CustomBottonAppBar(
-                          textbotton: "Settings",
+                          textbotton: "59".tr,
                           icondata: Icons.settings,
                           active: controller.currentpage == 1 ? true : false,
                           onPressed: () {
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     children: [
                       CustomBottonAppBar(
-                        textbotton: "Profile",
+                        textbotton: "60".tr,
                         icondata: Icons.person_outline,
                         active: controller.currentpage == 2 ? true : false,
                         onPressed: () {
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                       CustomBottonAppBar(
-                        textbotton: "Favorite",
+                        textbotton: "61".tr,
                         icondata: Icons.favorite_outline,
                         active: controller.currentpage == 3 ? true : false,
                         onPressed: () {

@@ -19,20 +19,16 @@ class CustomBottonAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
         onPressed: onPressed,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icondata,
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Icon(icondata,
+              color:
+                  active == true ? Appcolor.primaryColor : Color(0xff616161)),
+          Text(
+            textbotton,
+            style: TextStyle(
                 color:
                     active == true ? Appcolor.primaryColor : Color(0xff616161)),
-            Text(
-              textbotton,
-              style: TextStyle(
-                  color: active == true
-                      ? Appcolor.primaryColor
-                      : Color(0xff616161)),
-            )
-          ],
-        ));
+          )
+        ]));
   }
 }

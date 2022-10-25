@@ -1,18 +1,19 @@
 import 'package:get/get.dart';
+import 'package:shamil_ecommerce/view/screen/itemsdetails.dart';
+import '../../core/constant/routes.dart';
+import '../../view/screen/onboarding.dart';
+import '../../view/screen/auth/login.dart';
+import 'view/screen/auth/signup/Signup.dart';
+import 'view/screen/auth/signup/successsignup.dart';
+import 'view/screen/auth/signup/verifycodesignup.dart';
+import 'package:shamil_ecommerce/view/screen/language.dart';
+import 'view/screen/auth/forgetpassword/resetpassword.dart';
+import 'package:shamil_ecommerce/view/screen/itemspage.dart';
+import 'package:shamil_ecommerce/view/screen/homescreen.dart';
+import 'view/screen/auth/forgetpassword/successresetpassword.dart';
 import 'package:shamil_ecommerce/core/middleware/mymiddleware.dart';
 import 'package:shamil_ecommerce/view/screen/auth/forgetpassword/checkemail.dart';
 import 'package:shamil_ecommerce/view/screen/auth/forgetpassword/verifycodeForgetpassword.dart';
-import 'package:shamil_ecommerce/view/screen/homescreen.dart';
-import 'package:shamil_ecommerce/view/screen/language.dart';
-import 'view/screen/auth/signup/verifycodesignup.dart';
-import '../../core/constant/routes.dart';
-import 'view/screen/auth/signup/Signup.dart';
-import '../../view/screen/auth/login.dart';
-import 'view/screen/auth/forgetpassword/resetpassword.dart';
-import '../../view/screen/onboarding.dart';
-import 'view/screen/auth/forgetpassword/successresetpassword.dart';
-import 'view/screen/auth/signup/successsignup.dart';
-import 'package:shamil_ecommerce/view/screen/itemspage.dart';
 
 List<GetPage<dynamic>>? routes = [
   // ========================== Auth ==============================//
@@ -34,4 +35,5 @@ List<GetPage<dynamic>>? routes = [
   //========================= HomePage ===========================//
   GetPage(name: Approute.homePage, page: () => const HomeScreen()),
   GetPage(name: Approute.items, page: () => const ItemsPage()),
+  GetPage(name: Approute.itemsDetails, page: () => const ItemsDetails()),
 ];
