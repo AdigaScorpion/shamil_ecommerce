@@ -46,7 +46,7 @@ class Categories extends GetView<HomeControllerImp> {
               color: Appcolor.secondaryColor,
               borderRadius: BorderRadius.circular(10)),
           padding: EdgeInsets.all(10),
-          margin: EdgeInsets.only(bottom: 5),
+          margin: EdgeInsets.only(bottom: 10),
           height: 60,
           width: 80,
           child: SvgPicture.network(

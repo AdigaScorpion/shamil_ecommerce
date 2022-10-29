@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/controller/items.dart';
-import 'package:shamil_ecommerce/core/class/handling_data_view.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 import 'package:shamil_ecommerce/view/widget/customappbar.dart';
+import 'package:shamil_ecommerce/core/class/handling_data_view.dart';
 import 'package:shamil_ecommerce/view/widget/items/customlistitems.dart';
 import 'package:shamil_ecommerce/view/widget/items/listcategoriesitems.dart';
 
@@ -18,7 +18,7 @@ class ItemsPage extends StatelessWidget {
         padding: EdgeInsets.all(10),
         child: ListView(children: [
           CustomAppBar(
-            titleappbar: "Search",
+            titleappbar: "62".tr,
             onPressednotification: () {},
             onPressedsearch: () {},
           ),
@@ -32,7 +32,7 @@ class ItemsPage extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: controller.data.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, childAspectRatio: 0.8),
+                      crossAxisCount: 2, childAspectRatio: 0.6),
                   itemBuilder: (BuildContext Context, index) {
                     return CustomListItems(
                         itemsModel:

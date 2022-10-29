@@ -25,7 +25,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CachedNetworkImage(
-                    height: 100,
+                    height: 120,
                     fit: BoxFit.fill,
                     imageUrl: "${AppLink.imageitems}/${itemsModel.itemsImage}"),
                 SizedBox(height: 10),
