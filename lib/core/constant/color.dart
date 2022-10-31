@@ -8,4 +8,5 @@ class Appcolor {
   static const secondaryColor = Color(0xff2980b9);
   static const thierdColor = Color(0xff34495e);
   static const backColor = Color.fromARGB(255, 227, 227, 228);
+  static const itemsbackground = Color(0xffe4f1fe);
 }

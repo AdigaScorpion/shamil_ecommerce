@@ -24,10 +24,14 @@ class CustomListItems extends GetView<ItemsControllerImp> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CachedNetworkImage(
-                    height: 120,
-                    fit: BoxFit.fill,
-                    imageUrl: "${AppLink.imageitems}/${itemsModel.itemsImage}"),
+                Hero(
+                  tag: "${itemsModel.itemsId}",
+                  child: CachedNetworkImage(
+                      height: 120,
+                      fit: BoxFit.fill,
+                      imageUrl:
+                          "${AppLink.imageitems}/${itemsModel.itemsImage}"),
+                ),
                 SizedBox(height: 10),
                 Text(
                     "${TranslatDatabase(itemsModel.itemsNameAr, itemsModel.itemsName)}",

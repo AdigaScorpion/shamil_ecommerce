@@ -70,6 +70,7 @@ class MyTranslation extends Translations {
           "60": "الحساب",
           "61": "المفضلة",
           "62": "بحث",
+          "63": "شراء",
         },
         "en": {
           "1": "Choose Language",
@@ -124,6 +125,7 @@ class MyTranslation extends Translations {
           "60": "Profile",
           "61": "Favorite",
           "62": "Search",
+          "63": "buy",
         }
       };
 }
