@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/Material.dart';
+import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:shamil_ecommerce/core/services/services.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 
 abstract class ItemsDetailsController extends GetxController {
@@ -10,7 +12,10 @@ abstract class ItemsDetailsController extends GetxController {
 }
 
 class ItemsDetailsControllerImp extends ItemsDetailsController {
+  Myservices myservices = Get.find();
   late ItemsModel itemsModel;
+  late StatusRequest statusRequest;
+  List data = [];
 
   initialData() {
     itemsModel = Get.arguments['itemsmodel'];

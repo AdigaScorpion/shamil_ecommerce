@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import '../../core/constant/color.dart';
 import 'package:shamil_ecommerce/core/constant/routes.dart';
 import 'package:shamil_ecommerce/core/localization/changelocal.dart';
-import '../../core/constant/color.dart';
 
 class Language extends GetView<LocalController> {
   const Language({Key? key}) : super(key: key);

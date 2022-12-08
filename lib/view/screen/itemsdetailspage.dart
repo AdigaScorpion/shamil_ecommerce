@@ -7,12 +7,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shamil_ecommerce/view/widget/items/customdotslist.dart';
 import 'package:shamil_ecommerce/core/functions/translatedatabase.dart';
 
-class ItemsDetails extends GetView<ItemsDetailsControllerImp> {
-  const ItemsDetails({Key? key}) : super(key: key);
+class ItemsDetailsPage extends GetView<ItemsDetailsControllerImp> {
+  const ItemsDetailsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Get.put(ItemsDetailsControllerImp());
+
     return Scaffold(
         backgroundColor: Appcolor.itemsbackground,
         body: Column(children: [
@@ -86,21 +87,31 @@ class ItemsDetails extends GetView<ItemsDetailsControllerImp> {
                                 color: Appcolor.black,
                                 fontFamily: "sans",
                                 fontWeight: FontWeight.bold)),
-                        SizedBox(height: 5),
+                        SizedBox(height: 10),
                         Row(children: [
                           ...List.generate(
                               5,
                               ((index) => Icon(
                                     Icons.star_border_outlined,
-                                    size: 18,
+                                    size: 20,
                                   )))
                         ]),
-                        IconButton(
-                            alignment: Alignment.bottomCenter,
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_outline,
-                            ))
+                        // GetBuilder<FavoriteController>(
+                        // builder: (controller) => IconButton(
+                        //     onPressed: () {
+                        //       if (controller.favorite[itemsModel.itemsId] ==
+                        //           '1') {
+                        //         controller.setfavorite(itemsModel.itemsId, '0');
+                        //       } else {
+                        //         controller.setfavorite(itemsModel.itemsId, '1');
+                        //       }
+                        //     },
+                        //     icon: Icon(
+                        //       controller.favorite[itemsModel.itemsId] == "1"
+                        //           ? Icons.favorite
+                        //           : Icons.favorite_outline,
+                        //       color: Appcolor.favorite,
+                        //     ))),
                       ]))
                 ]),
                 Container(

@@ -14,15 +14,11 @@ abstract class LoginController extends GetxController {
 
 class LogInControllerImp extends LoginController {
   LoginData logInData = LoginData(Get.find());
-
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
-
   StatusRequest? statusRequest;
   Myservices myservices = Get.find();
-
   late TextEditingController email;
   late TextEditingController password;
-
   bool isshowpassword = true;
 
   showPassword() {

@@ -5,7 +5,7 @@ import 'package:shamil_ecommerce/view/screen/itemspage.dart';
 import 'package:shamil_ecommerce/view/screen/auth/login.dart';
 import 'package:shamil_ecommerce/view/screen/onboarding.dart';
 import 'package:shamil_ecommerce/view/screen/homescreen.dart';
-import 'package:shamil_ecommerce/view/screen/itemsdetails.dart';
+import 'package:shamil_ecommerce/view/screen/itemsdetailspage.dart';
 import 'package:shamil_ecommerce/core/middleware/mymiddleware.dart';
 import 'package:shamil_ecommerce/view/screen/auth/signup/Signup.dart';
 import 'package:shamil_ecommerce/view/screen/auth/signup/successsignup.dart';
@@ -35,5 +35,6 @@ List<GetPage<dynamic>>? routes = [
   //========================= HomePage ===========================//
   GetPage(name: Approute.homePage, page: () => const HomeScreen()),
   GetPage(name: Approute.items, page: () => const ItemsPage()),
-  GetPage(name: Approute.itemsDetails, page: () => const ItemsDetails()),
+  GetPage(
+      name: Approute.itemsDetailspage, page: () => const ItemsDetailsPage()),
 ];

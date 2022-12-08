@@ -71,6 +71,9 @@ class MyTranslation extends Translations {
           "61": "المفضلة",
           "62": "بحث",
           "63": "شراء",
+          "64": "نجاح",
+          "65": "تم اضافة المنتج الى المفضلة",
+          "66": "تم ازالة المنتج من المفضلة"
         },
         "en": {
           "1": "Choose Language",
@@ -126,6 +129,9 @@ class MyTranslation extends Translations {
           "61": "Favorite",
           "62": "Search",
           "63": "buy",
+          "64": "Success",
+          "65": "The Item has been added to Favorite",
+          "66": "The Item has been removed from Favorite",
         }
       };
 }

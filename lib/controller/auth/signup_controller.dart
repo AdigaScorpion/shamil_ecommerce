@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:shamil_ecommerce/core/class/statusrequest.dart';
+import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/core/constant/routes.dart';
+import 'package:shamil_ecommerce/core/class/statusrequest.dart';
 import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
 import 'package:shamil_ecommerce/data/datasource/remot/auth/signup_data.dart';
 

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:shamil_ecommerce/core/class/statusrequest.dart';
 import 'package:shamil_ecommerce/core/functions/handlingdata.dart';
+import 'package:shamil_ecommerce/core/services/services.dart';
 import 'package:shamil_ecommerce/data/datasource/remot/items_data.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 
@@ -21,6 +22,7 @@ class ItemsControllerImp extends ItemsController {
   List data = [];
 
   late StatusRequest statusRequest;
+  Myservices myservices = Get.find();
 
   @override
   void onInit() {
@@ -48,7 +50,8 @@ class ItemsControllerImp extends ItemsController {
   getitems(categid) async {
     data.clear();
     statusRequest = StatusRequest.loading;
-    var response = await itemsData.getData(categid);
+    var response = await itemsData.getData(
+        categid, myservices.sharedPreferences.getInt("id").toString());
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       update();

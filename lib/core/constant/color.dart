@@ -9,4 +9,5 @@ class Appcolor {
   static const thierdColor = Color(0xff34495e);
   static const backColor = Color.fromARGB(255, 227, 227, 228);
   static const itemsbackground = Color(0xffe4f1fe);
+  static const favorite = Colors.red;
 }

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:shamil_ecommerce/controller/favoritecontroller.dart';
 import 'package:shamil_ecommerce/linkapi.dart';
 import 'package:shamil_ecommerce/controller/items.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
@@ -13,6 +14,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
 
   @override
   Widget build(BuildContext context) {
+    FavoriteController controllerfav = Get.put(FavoriteController());
     return InkWell(
         onTap: () {
           controller.gotoitemsdetails(itemsModel);
@@ -44,7 +46,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                         5,
                         ((index) => Icon(
                               Icons.star_border_outlined,
-                              size: 15,
+                              size: 16,
                             )))
                   ],
                 ),
@@ -56,11 +58,28 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                             fontSize: 14,
                             color: Appcolor.primaryColor,
                             fontFamily: "sans")),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.favorite_outline,
-                        ))
+                    GetBuilder<FavoriteController>(
+                        builder: (controller) => IconButton(
+                            onPressed: () {
+                              if (controller.favorite[itemsModel.itemsId] ==
+                                  "1") {
+                                controller.setfavorite(
+                                    itemsModel.itemsId!, "0");
+                                controllerfav.removeFavorite(
+                                    itemsModel.itemsId.toString());
+                              } else {
+                                controller.setfavorite(
+                                    itemsModel.itemsId!, "1");
+                                controllerfav
+                                    .addFavorite(itemsModel.itemsId.toString());
+                              }
+                            },
+                            icon: Icon(
+                              controller.favorite[itemsModel.itemsId] == "1"
+                                  ? Icons.favorite
+                                  : Icons.favorite_outline,
+                              color: Appcolor.favorite,
+                            ))),
                   ],
                 )
               ],

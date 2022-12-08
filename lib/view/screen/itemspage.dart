@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:shamil_ecommerce/controller/favoritecontroller.dart';
 import 'package:shamil_ecommerce/controller/items.dart';
 import 'package:shamil_ecommerce/data/model/itemsmodel.dart';
 import 'package:shamil_ecommerce/view/widget/customappbar.dart';
@@ -13,6 +14,7 @@ class ItemsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(ItemsControllerImp());
+    FavoriteController controllerfav = Get.put(FavoriteController());
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(10),
@@ -34,6 +36,8 @@ class ItemsPage extends StatelessWidget {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, childAspectRatio: 0.6),
                   itemBuilder: (BuildContext Context, index) {
+                    controllerfav.favorite[controller.data[index]['items_id']] =
+                        controller.data[index]['favorite'];
                     return CustomListItems(
                         itemsModel:
                             ItemsModel.fromJson(controller.data[index]));

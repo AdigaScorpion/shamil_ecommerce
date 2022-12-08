@@ -1,14 +1,14 @@
-import 'package:shamil_ecommerce/controller/auth/signup_controller.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:shamil_ecommerce/core/constant/color.dart';
-import 'package:shamil_ecommerce/core/functions/app_exit_alert.dart';
 import 'package:shamil_ecommerce/core/functions/validinput.dart';
+import 'package:shamil_ecommerce/view/widget/auth/textsignup.dart';
+import 'package:shamil_ecommerce/core/functions/app_exit_alert.dart';
 import 'package:shamil_ecommerce/view/widget/auth/custombotton.dart';
 import 'package:shamil_ecommerce/view/widget/auth/customtextbody.dart';
 import 'package:shamil_ecommerce/view/widget/auth/customtextform.dart';
+import 'package:shamil_ecommerce/controller/auth/signup_controller.dart';
 import 'package:shamil_ecommerce/view/widget/auth/customtexttitleauth.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:shamil_ecommerce/view/widget/auth/textsignup.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
